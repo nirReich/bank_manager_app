@@ -36,6 +36,7 @@ export default function LogIn(props) {
             <br/>
             <Link to={'/register'}><Button variant="outline-primary">Create New User</Button></Link>
             <br />
+            <p>user name: nir reich, password:111111</p>
             <br />
             {setTheLink()}
 
