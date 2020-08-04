@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bank_manager_app/static/css/main.1ca921b8.chunk.css",
-    "main.js": "/bank_manager_app/static/js/main.87f0156b.chunk.js",
-    "main.js.map": "/bank_manager_app/static/js/main.87f0156b.chunk.js.map",
+    "main.js": "/bank_manager_app/static/js/main.affffb6b.chunk.js",
+    "main.js.map": "/bank_manager_app/static/js/main.affffb6b.chunk.js.map",
     "runtime-main.js": "/bank_manager_app/static/js/runtime-main.db33e9c1.js",
     "runtime-main.js.map": "/bank_manager_app/static/js/runtime-main.db33e9c1.js.map",
     "static/css/2.30c2d978.chunk.css": "/bank_manager_app/static/css/2.30c2d978.chunk.css",
     "static/js/2.ef1e9f7a.chunk.js": "/bank_manager_app/static/js/2.ef1e9f7a.chunk.js",
     "static/js/2.ef1e9f7a.chunk.js.map": "/bank_manager_app/static/js/2.ef1e9f7a.chunk.js.map",
     "index.html": "/bank_manager_app/index.html",
-    "precache-manifest.03cf3f4466c515929237131bde8b4b4f.js": "/bank_manager_app/precache-manifest.03cf3f4466c515929237131bde8b4b4f.js",
+    "precache-manifest.41bedb33c24f7ff7d2b9ed1c93b61b14.js": "/bank_manager_app/precache-manifest.41bedb33c24f7ff7d2b9ed1c93b61b14.js",
     "service-worker.js": "/bank_manager_app/service-worker.js",
     "static/css/2.30c2d978.chunk.css.map": "/bank_manager_app/static/css/2.30c2d978.chunk.css.map",
     "static/css/main.1ca921b8.chunk.css.map": "/bank_manager_app/static/css/main.1ca921b8.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.30c2d978.chunk.css",
     "static/js/2.ef1e9f7a.chunk.js",
     "static/css/main.1ca921b8.chunk.css",
-    "static/js/main.87f0156b.chunk.js"
+    "static/js/main.affffb6b.chunk.js"
   ]
 }
