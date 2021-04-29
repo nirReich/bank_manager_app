@@ -11,12 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.showBtn{
-  width: 30px;
-  height: 30px;
-  border: 1px solid black;
-  border-radius: 100%;
-  background-color: red;
+
+.dateDiv{
+  margin-left: 80%;
+}
+
+
+.inAppButtons{
+  width: 15vw;
+  margin: 0.5%;
 }
 
 .cancelBtn{
@@ -26,18 +29,236 @@ code {
   color: white;
 }
 
-.clientBtn{
-  width: 100px;
-  height: 100px;
-  margin: 5px;
+.transBtn{
+  
+  height: 4em;
+  margin: 1%;
   
 }
 .headers{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+ 
+}
+
+.loginHeader{
+  padding: 1%;
+  height: 6vw;
+  color: white;
+  background-color: rgb(87, 87, 255);
+  margin-bottom: 5%;
+  
+}
+
+.clientHeader{
+  background-color: rgb(87, 87, 255);
+  color: white;
+  height: 7vw;
+  margin-bottom: 3%;
+  
+}
+
+.loginBody{
+  border: 1px solid blue;
+  background-color: white;
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  padding: 3%;
 }
 
 .editInp{
   margin: 5px;
   position: relative;
   
+}
+
+.instructionsP{
+  color: blue;
+  font-size: small;
+}
+
+.instructionsDiv{
+  text-align: left;
+  margin-left: 5%;
+
+}
+
+.balanceCard_Container{
+  background-color: white;
+  margin: auto;
+  margin-bottom: 4%;
+  padding: 2%;
+  width: 40%;
+  border: 2px solid blue;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.balanceWarnContainer{
+  margin: auto;
+  margin-bottom: 4%;
+  padding: 2%;
+  width: 40%;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.exitBtn{
+  padding: auto;
+  margin-top: 5%;
+  height: 85%;
+}
+
+.loginButtonsStyle{
+  width: 15vw;
+  margin: 1%;
+}
+
+.loginInputs{
+margin: 1%;
+width: 15vw;
+}
+
+.loginInpDiv{
+  margin: auto;
+  
+  
+}
+
+.balanceFrame{
+  width: 45%;
+  height: 4vw;
+  padding: 2%;
+  margin: auto;
+  background-color: rgb(168, 168, 168);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.actionComp{
+  position: relative;
+  bottom: 50vh;
+  background-color: white;
+  border: 2px solid blue;
+  border-radius: 5px;
+  width: 30%;
+  margin: auto;
+  padding: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.actionBtns{
+  width: 25%;
+  margin: 1%;
+  padding: 1%;
+}
+
+.registerHeader{
+  background-color: rgb(87, 87, 255);
+  color: white;
+  height: 7vw;
+  padding: 1.5%;
+  margin-bottom: 3%;
+}
+
+.registerInputs{
+  width: 15vw;
+  height: 3vw;
+  margin: 0.5%;
+}
+
+.registerBtn {
+  width: 15vw;
+  margin: 0.5%;
+}
+
+.editRegisterHeader{
+  background-color: rgb(87, 87, 255);
+  color: white;
+  height: 7vw;
+  padding: 1.5%;
+ 
+}
+
+.editInputs{
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  padding: 1%;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+.editButtonsDiv{
+  margin-top: 1%;
+}
+
+.editButtons{
+  width: 15vw;
+  margin: 0.5%;
+}
+
+.transactionsTable{
+  margin: 2%;
+  padding: 1%;
+  border: 2px solid blue;
+  border-radius: 5px;
+  min-height: 25vw;
+
+  background-color: white;
+}
+
+
+.transactionsLines{
+  margin: 2%;
+}
+
+.transactionsHeader{
+  background-color: rgb(87, 87, 255);
+  color: white;
+  height: 6vw;
+  padding: 1.5%;
+}
+
+.adminHeader{
+  background-color: rgb(87, 87, 255);
+  color: white;
+  height: 6vw;
+  padding: 1.5%;
+  margin-bottom: 2%;
+}
+
+.balanceCahngeFrame{
+  width: 25%;
+  height: 4vw;
+  padding: 1%;
+  margin: auto;
+  background-color: rgb(168, 168, 168);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.balanceChangeCompContainer{
+  position: relative;
+  bottom: 72vh;
+  width: 50%;
+  margin: auto;
+  padding: 1%;
+  border: 2px solid blue;
+  border-radius: 5px;
+  min-height: 25vw;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.balanceFrameManeger{
+  width: 23%;
+  height: 4vw;
+  padding: 1%;
+  margin: auto;
+  background-color: rgb(168, 168, 168);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
 }

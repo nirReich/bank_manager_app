@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  
+  height: 800px;
+  background-color: rgb(219, 219, 219);
 }
 
 .App-logo {
@@ -28,6 +29,15 @@
 .App-link {
   color: #61dafb;
 }
+
+
+
+.navBar{
+  text-align: center;
+  margin: 0 5% 0 5%;
+}
+
+
 
 @keyframes App-logo-spin {
   from {

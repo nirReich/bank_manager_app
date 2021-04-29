@@ -5,41 +5,73 @@ import Button from 'react-bootstrap/Button'
 export default function LogIn(props) {
     const [user, setUser] = useState('');
     const [passWord, setPassWord] = useState('');
-    
 
 
-    const setTheLink = () => {//handels the enter button
+    //handels the enter button validation
+    // change to switch!!!!
+    const setTheLink = () => {
 
         if (user === 'admin' && passWord === 'admin') {
-            return <Link to={'/admin'}><Button variant="outline-success">enter</Button></Link>
+            return <Link to={'/admin'}><Button variant="success" className="loginButtonsStyle">Enter</Button></Link>
         }
-        else if (props.pickClient(user, passWord)) {
-            return <Link to={`/${user}`}><Button variant="outline-success">enter</Button></Link>
+        else if (!props.pickClientName(user)) {
+            return <Button variant="success" className="loginButtonsStyle" onClick={() => { alert('User not found!') }}>Enter</Button>
         }
-        else { return <Button variant="outline-success" onClick={() => { alert('User not found!') }}>enter</Button> }
-
-
+        else if (!props.pickClientPassword(passWord)) {
+            return <Button variant="success" className="loginButtonsStyle" onClick={() => { alert('Password Incorrect!') }}>Enter</Button>
+        }
+        else if (props.pickClientName(user) && props.pickClientPassword(passWord)) {
+            return <Link to={`/${user}`}><Button variant="success" className="loginButtonsStyle">Enter</Button></Link>
+        }
+        else { return <Button variant="success" className="loginButtonsStyle" onClick={() => { alert('User not found!') }}>Enter</Button> }
 
     }
-    
+
+
+
     //---------------------------------------
     return (
         <div className="container">
 
-            <h1 className="headers">Banking App</h1>
-            <br />
-            <input type="text" placeholder="user name" onChange={(e) => { setUser(e.target.value) }} />
-            <br />
-            <br/>
-            <input type="Password" placeholder="password" onChange={(e) => { setPassWord(e.target.value) }} />
-            <br />
-            <br/>
-            <Link to={'/register'}><Button variant="outline-primary">Create New User</Button></Link>
-            <br />
-            <p>user name: "nir reich", password:"111111" for user page</p>
-            <p>user name: "admin", password:"admin" for manager page</p>
-            <br />
-            {setTheLink()}
+            <div className="loginHeader">
+
+                <h1 className="headers">Expenses App</h1>
+
+            </div>
+
+            <div className="loginBody">
+
+                <div className="instructionsDiv">
+
+                <p className="instructionsP">user name: "nir reich", password:"111111" for user page</p>
+                <p className="instructionsP">user name: "admin", password:"admin" for manager page</p>
+                </div>
+                
+                <div className="loginInpDiv">
+
+                    <label>
+                        User Name
+                        <input type="text" placeholder="user name" className="loginInputs" onChange={(e) => { setUser(e.target.value) }} />
+                    </label>
+
+                    <br />
+
+                    <label>
+                        Password
+                        <input type="Password" placeholder="password" className="loginInputs" onChange={(e) => { setPassWord(e.target.value) }} />
+                    </label>
+
+                </div>
+
+                {setTheLink()}
+                <br/>
+                <br/>
+                <p >New in here?</p>
+                <Link to={'/register'}><Button variant="primary" className="loginButtonsStyle">Create New User</Button></Link>
+                
+
+            </div>
+
 
         </div>
     )
