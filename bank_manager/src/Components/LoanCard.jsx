@@ -55,7 +55,7 @@ export default function LoanCard(props) {
                         context.clients[index].id,
                         context.clients[index].name,
                         context.clients[index].password,
-                        (context.clients[index].money + loanAmount),
+                        parseInt(context.clients[index].money) + parseInt(loanAmount),
                         index
                     )
                     //minus money to user
@@ -63,7 +63,7 @@ export default function LoanCard(props) {
                         context.clients[props.userIndex].id,
                         context.clients[props.userIndex].name,
                         context.clients[props.userIndex].password,
-                        (context.clients[props.userIndex].money - loanAmount),
+                        parseInt(context.clients[props.userIndex].money) - parseInt(loanAmount),
                         props.userIndex
                     )
                     alert(`loan of ${loanAmount} is confirmed!`)

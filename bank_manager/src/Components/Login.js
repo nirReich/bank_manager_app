@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useHistory } from "react-router-dom";
 import Button from 'react-bootstrap/Button'
 
+
 export default function LogIn(props) {
     const [user, setUser] = useState('');
     const [passWord, setPassWord] = useState('');
@@ -34,18 +35,17 @@ export default function LogIn(props) {
         <div className="container">
 
             <div className="loginHeader">
-
-                <h1 className="headers">Expenses App</h1>
+                
+                <h1 className="headers">Banking- Home budget app</h1>
 
             </div>
 
             <div className="loginBody">
+                <div className="welcomNote">
+                    Welcom to Banking! The best home budget management app in the world!
 
-                <div className="instructionsDiv">
-
-                <p className="instructionsP">user name: "nir reich", password:"111111" for user page</p>
-                <p className="instructionsP">user name: "admin", password:"admin" for manager page</p>
                 </div>
+          
                 
                 <div className="loginInpDiv">
 

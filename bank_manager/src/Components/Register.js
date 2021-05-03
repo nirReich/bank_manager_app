@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 
 export default function Register(props) {
 
-    const [newClient, setNewClient] = useState({ id: '', name: '', password: '', money: '',premission: false, actions: [] });
+    const [newClient, setNewClient] = useState({ id: '', name: '', password: '', money: '', premission: false, actions: [] });
     const [passConf, setPassConf] = useState('')
 
 
@@ -71,41 +71,46 @@ export default function Register(props) {
                 <h1 className="headers">Welcom New User</h1>
             </div>
 
+            <div className="newUserDataCard">
 
-            <h4>Please Register Here</h4>
 
-            <label>
-                User id:
-                <input type="text" id="id" className="registerInputs" placeholder="id" onChange={setData} />
-            </label>
+                <h4>Please Register Here</h4>
 
-            <br />
+                <label>
+                    User id
+                    <input type="text" id="id" className="registerInputs" placeholder="id" onChange={setData} />
+                </label>
+                
 
-            <label>
-                User Name:
+                <br />
+
+                <label>
+                    User Name
                 <input type="text" id="name" className="registerInputs" placeholder="user name" onChange={setData} />
-            </label>
-            <br />
-            <label>
-                Password:
+                </label>
+                <br />
+                <label>
+                    Password
                 <input type="text" id="password" className="registerInputs" placeholder="Password" onChange={setData} />
-            </label>
-            <br />
-            <label>
-                Confirm Password:
+                </label>
+                <br />
+                <label>
+                    Confirm Password
                 <input type="text" id="passwordConf" className="registerInputs" placeholder="Confirm password" onChange={setData} />
-            </label>
-            <br />
-            <label>
-                Cash Balance:
+                </label>
+                <br />
+                <label>
+                    Cash Balance
                 <input type="text" id="money" className="registerInputs" placeholder=" Cash Balance" onChange={setData} />
-            </label>
+                </label>
 
-            <br />
-            <Link to={'/'}> <Button variant="success" className="registerBtn" onClick={() => { sendClient() }}>Create</Button></Link>
+                <br />
+                <Link to={'/'}> <Button variant="success" className="registerBtn" onClick={() => { sendClient() }}>Create</Button></Link>
 
-            <br />
-            <Link to={'/'}><Button variant="primary" className="registerBtn">Back</Button></Link>
+                <br />
+                <Link to={'/'}><Button variant="primary" className="registerBtn">Back</Button></Link>
+            </div>
+
         </div>
     )
 }

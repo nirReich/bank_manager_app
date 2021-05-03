@@ -43,11 +43,6 @@ export default function Manager(props) {
         return "danger"
     }
 
-    const showClients =()=>{
-        if (props.clients) {
-            
-        }
-    }
 
     //---------------------------------------------------------------
     return (
@@ -83,12 +78,22 @@ export default function Manager(props) {
                                             <div className="col-1"></div>
                                             <div className="col-5">{e.company}</div>
                                             <div className="col-4">{e.amount}</div>
-                                            <div className="col-1"><Button variant={premissionBtn(clientIndex)} className="premissionBtn" onClick={() => { props.changePremission(clientIndex) }}>premission</Button></div>
+                                            <div className="col-1"></div>
                                             <div className="col-1"><Button variant="danger" onClick={() => { props.removeAction(clientIndex, actionIndex) }}>X </Button></div>
                                         </div>
                                     )
                                 })}
-                                <div className="row"><Button variant="danger" className="cancelBtn" onClick={() => { props.removeClient(clientIndex) }}>Erase {element.name}</Button></div>
+                                <div className="row">
+                                    <div>
+                                    <Button variant="danger" className="cancelBtn" onClick={() => { props.removeClient(clientIndex) }}>Erase {element.name}</Button>
+
+                                    </div>
+                                    <div>
+
+                                    <Button variant={premissionBtn(clientIndex)} className="premissionBtn" onClick={() => { props.changePremission(clientIndex) }}>premission</Button>
+                                    </div>
+                                    
+                                </div>
 
                             </Card.Body>
 

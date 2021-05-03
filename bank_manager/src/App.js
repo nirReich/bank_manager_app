@@ -7,6 +7,7 @@ import Register from './Components/Register';
 import Manager from './Components/Manager';
 import Editregister from './Components/Editregister';
 import Transactions from './Components/Transactions';
+import Footer from './Components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const clientsContext = React.createContext();
@@ -130,6 +131,7 @@ export default function App() {
 
         </Switch>
       </Router>
+      <Footer/>
       </clientsContext.Provider>
     </div>
   )
