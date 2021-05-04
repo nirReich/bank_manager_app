@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from "react-router-dom";
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover'
 
 
 export default function LogIn(props) {
     const [user, setUser] = useState('');
     const [passWord, setPassWord] = useState('');
+    
 
 
     //handels the enter button validation
@@ -29,13 +32,35 @@ export default function LogIn(props) {
     }
 
 
+    // hint button
+    const popover = (
+        <Popover id="popover-basic">
+          <Popover.Title as="h3">Admin/Client entrance</Popover.Title>
+          <Popover.Content> 
+            <strong>Admin:</strong>username: admin password: admin
+            <br/>
+            <strong>Client:</strong> username: rick sanchez password: 111111
+            
+          </Popover.Content>
+        </Popover>
+      );
+      
+      const HintBtn = () => (
+        <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+          <Button className="hintBtn" variant="dark">Hint</Button>
+        </OverlayTrigger>
+      );
+      
+     
+
+
 
     //---------------------------------------
     return (
         <div className="container">
 
             <div className="loginHeader">
-                
+
                 <h1 className="headers">Banking- Home budget app</h1>
 
             </div>
@@ -45,8 +70,11 @@ export default function LogIn(props) {
                     Welcom to Banking! The best home budget management app in the world!
 
                 </div>
-          
-                
+
+
+
+                <HintBtn  />
+
                 <div className="loginInpDiv">
 
                     <label>
@@ -64,11 +92,11 @@ export default function LogIn(props) {
                 </div>
 
                 {setTheLink()}
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <p >New in here?</p>
                 <Link to={'/register'}><Button variant="primary" className="loginButtonsStyle">Create New User</Button></Link>
-                
+
 
             </div>
 

@@ -79,7 +79,7 @@ export default function Manager(props) {
                                             <div className="col-5">{e.company}</div>
                                             <div className="col-4">{e.amount}</div>
                                             <div className="col-1"></div>
-                                            <div className="col-1"><Button variant="danger" onClick={() => { props.removeAction(clientIndex, actionIndex) }}>X </Button></div>
+                                            <div className="col-1"><Button variant="danger" onClick={() => { props.removeAction(clientIndex, actionIndex) }}> X </Button></div>
                                         </div>
                                     )
                                 })}
@@ -90,7 +90,7 @@ export default function Manager(props) {
                                     </div>
                                     <div>
 
-                                    <Button variant={premissionBtn(clientIndex)} className="premissionBtn" onClick={() => { props.changePremission(clientIndex) }}>premission</Button>
+                                    <Button variant={premissionBtn(clientIndex)} className="premissionBtn" onClick={() => { props.changePremission(clientIndex) }}>Premission</Button>
                                     </div>
                                     
                                 </div>

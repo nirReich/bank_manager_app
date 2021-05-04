@@ -10,7 +10,7 @@ export default function Action(props) {
 
     return (
         <div className="actionComp">
-            <h4 className="headers">New Expense</h4>
+            <h4 className="headers">New Transaction</h4>
             <input type="number" placeholder="Perceuse amount" onChange={(e) => { setAmount(e.target.value) }} />
             <br />
             <br/>

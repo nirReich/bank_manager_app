@@ -10,7 +10,7 @@ export default function LoanCard(props) {
     let context = useContext(clientsContext);
 
     const newList = context.clients.filter(element => element.id != context.clients[props.userIndex].id)
-    const [userList, setUserList] = useState(newList);
+    const [userList] = useState(newList);
     const [selectedUser, setSelectedUser] = useState('');
     const [loanAmount, setloanAmount] = useState('');
     const [warningMsg, setWarningMsg] = useState('');
@@ -37,7 +37,7 @@ export default function LoanCard(props) {
 
     }
 
-    const confirmLoan = () => {
+    const confirmLoan = (index) => {
 
         if (isNaN(loanAmount)) {
 
@@ -45,11 +45,14 @@ export default function LoanCard(props) {
         else if (loanAmount <= 0) {
             alert('Amount must be greater then 0!')
         }
+        else if (loanAmount > parseInt(context.clients[index].money)){
+            alert('Not Enough funds!')
+        }
         else {
 
             for (let index = 0; index < context.clients.length; index++) {
                 if (context.clients[index].id === selectedUser) {
-                    debugger
+                    
                     //plus money to selected user
                     context.editClient(
                         context.clients[index].id,
@@ -86,9 +89,9 @@ export default function LoanCard(props) {
                 <form>
                     <div>
                         <label htmlFor="loanAmount">
-                            Set loan amount:
+                            Set loan amount 
                     </label>
-                        <input type="number" placeholder="Amount" onChange={amountHandler} />
+                        <input className="usersInputLoan" type="number" placeholder="Amount" onChange={amountHandler} />
                         <h6 className="amountWarning">{warningMsg}</h6>
                     </div>
                     
@@ -110,9 +113,9 @@ export default function LoanCard(props) {
 
             <h4 className="headers">Creat New Loan</h4>
             <div>
-                <label htmlFor="users">Pick user for your loan:</label>
+                <label htmlFor="users">Pick user for your loan </label>
 
-                <select id="users" name="users" size="1" value={selectedUser} onChange={handelSelectedClient}>
+                <select className="usersInputLoan" id="users" name="users" size="1" value={selectedUser} onChange={handelSelectedClient}>
                     <option value=''></option>
                     {userList.map((element, index) => {
                         return (
@@ -123,7 +126,7 @@ export default function LoanCard(props) {
                 </select>
                 {showLoanDetails()}
                 <div>
-                        <Button onClick={() => confirmLoan()} disabled={confBtn}>Confirm</Button>
+                        <Button onClick={() => confirmLoan(props.userIndex)} disabled={confBtn}>Confirm</Button>
                         <Button variant="danger" onClick={() => handelCancelLoan()} >Cancle</Button>
                 </div>
             </div>

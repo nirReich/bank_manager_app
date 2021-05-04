@@ -18,7 +18,7 @@ export default function App() {
   const [clients, setClients] = useState([
     { 
     id: '123456789',
-    name: 'nir reich',
+    name: 'rick sanchez',
     password: '111111',
     money: '10000',
     premission: false,
