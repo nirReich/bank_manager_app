@@ -1,5 +1,6 @@
 # bank_manager_app
-home budget management app (created with react)
+home budget management app
+project created with react.
 simple way to track your budget or for the admin of the house to mange users accounts.
 
 As user you can register, give loans to other users, list and track expenses or edit your data.
