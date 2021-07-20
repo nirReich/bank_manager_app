@@ -41,6 +41,9 @@ export default function App() {
   }
 
   const addAction = (comp, amount, index) => {//adds new action. from client comp
+    // if (amount > clients[index].money || clients[index].money === '0') {
+    //   return <BalanceWarning cancle={handelLoanFlag}/>
+    // }
     clients[index].actions.push({ company: comp, amount: amount })
     clients[index].money = clients[index].money - amount
     console.log(clients[index].money);
