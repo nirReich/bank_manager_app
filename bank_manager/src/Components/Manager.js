@@ -53,7 +53,7 @@ export default function Manager(props) {
 
             {props.clients.map((element, clientIndex) => {
                 return <Accordion defaultActiveKey="0">
-                    <Card>
+                    <Card className="clientAdminCard">
                         <Card.Header>
                             <h4 > {element.name}</h4>
                             <h5 > {element.id}</h5>
@@ -70,7 +70,12 @@ export default function Manager(props) {
                         </Card.Header>
                         <Accordion.Collapse eventKey={flag}>
                             <Card.Body>
-
+                                <div className="row transactionsLines">
+                                    <div className="col-1"></div>
+                                    <div className="col-5 "><h5>Compony Name</h5></div>
+                                    <div className="col-4"><h5>Amount</h5></div>
+                                    <div className="col-1"></div>
+                                </div>
                                 {element.actions.map((e, actionIndex) => {
                                     return (
 
@@ -85,14 +90,14 @@ export default function Manager(props) {
                                 })}
                                 <div className="row">
                                     <div>
-                                    <Button variant="danger" className="cancelBtn" onClick={() => { props.removeClient(clientIndex) }}>Erase {element.name}</Button>
+                                        <Button variant="danger" className="cancelBtn" onClick={() => { props.removeClient(clientIndex) }}>Erase {element.name}</Button>
 
                                     </div>
                                     <div>
 
-                                    <Button variant={premissionBtn(clientIndex)} className="premissionBtn" onClick={() => { props.changePremission(clientIndex) }}>Premission</Button>
+                                        <Button variant={premissionBtn(clientIndex)} className="premissionBtn" onClick={() => { props.changePremission(clientIndex) }}>Premission</Button>
                                     </div>
-                                    
+
                                 </div>
 
                             </Card.Body>

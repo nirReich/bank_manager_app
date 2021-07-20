@@ -8,7 +8,7 @@ import Popover from 'react-bootstrap/Popover'
 export default function LogIn(props) {
     const [user, setUser] = useState('');
     const [passWord, setPassWord] = useState('');
-    
+
 
 
     //handels the enter button validation
@@ -35,25 +35,21 @@ export default function LogIn(props) {
     // hint button
     const popover = (
         <Popover id="popover-basic">
-          <Popover.Title as="h3">Admin/Client entrance</Popover.Title>
-          <Popover.Content> 
-            <strong>Admin:</strong>username: admin password: admin
-            <br/>
-            <strong>Client:</strong> username: rick sanchez password: 111111
-            
+            <Popover.Title as="h3">Admin/Client entrance</Popover.Title>
+            <Popover.Content>
+                <strong>Admin:</strong>username: admin password: admin
+            <br />
+                <strong>Client:</strong> username: rick sanchez password: 111111
+
           </Popover.Content>
         </Popover>
-      );
-      
-      const HintBtn = () => (
+    );
+
+    const HintBtn = () => (
         <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-          <Button className="hintBtn" variant="dark">Hint</Button>
+            <Button className="hintBtn" variant="dark">Hint</Button>
         </OverlayTrigger>
-      );
-      
-     
-
-
+    );
 
     //---------------------------------------
     return (
@@ -61,7 +57,7 @@ export default function LogIn(props) {
 
             <div className="loginHeader">
 
-                <h1 className="headers">Banking- Home budget app</h1>
+                <p className="headers">Banking- Home budget app</p>
 
             </div>
 
@@ -71,9 +67,7 @@ export default function LogIn(props) {
 
                 </div>
 
-
-
-                <HintBtn  />
+                <HintBtn />
 
                 <div className="loginInpDiv">
 

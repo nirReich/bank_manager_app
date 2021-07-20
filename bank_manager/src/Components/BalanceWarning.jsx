@@ -5,12 +5,12 @@ export default function BalanceWarning(props) {
     return (
         <div className="balanceWarnContainer">
             <h4>
-            Your balance is {props.balance}
-                <br/>
-            Cant create new transactions with negative balance!
+            Low cash balance!
+            <br />
+            Cant create new actions
             </h4>
 
-            <Button variant="danger" onClick={() => { props.cancle() }}>Cancel</Button>
+            <Button variant="danger" onClick={() => { props.cancle() }}>Exit</Button>
         </div>
     )
 }

@@ -54,7 +54,7 @@ export default function Client(props) {
         if (loanFlag) {
 
             if (props.user.money <= 0) {
-                return <BalanceWarning balance={props.user.money} cancle={handelFlag}/>
+                return <BalanceWarning balance={props.user.money} cancle={handelLoanFlag}/>
             }
             else {            
                 return <LoanCard userIndex = {props.index} handelLoanFlag={handelLoanFlag}/>
@@ -85,7 +85,7 @@ export default function Client(props) {
             </div>
           
             <BalanceCard balance={props.user.money} name={props.user.name} id={props.user.id} />
-            <Button className="transBtn" variant="success" onClick={() => { handelFlag() }}> Create New Transaction</Button>
+            <Button className="transBtn" variant="success" onClick={() => { handelFlag() }}> Create new transaction</Button>
             <Button className="transBtn loanBtn"  onClick={() => { handelLoanFlag() }}> Create new loan</Button>
 
             {showAction()}
